@@ -26,6 +26,5 @@ constructor() {
       }
      }.bind(this));
   }.bind(this));
-
 }
 }
