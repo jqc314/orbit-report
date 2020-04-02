@@ -4,7 +4,7 @@ export class Satellite {
   orbitType: string;
   operational: boolean;
   type: string;
-  showWarning: boolean = true;
+
   constructor(
     name: string,
     type: string,
@@ -18,10 +18,11 @@ export class Satellite {
       (this.operational = operational),
       (this.type = type);
   }
-
   shouldShowWarning() {
-    if (this.type.toLowerCase() === "space debris") {
-       return this.showWarning = true;
+    if (this.type.toLowerCase() === 'space debris') {
+       return true;
+    } else {
+      return false;
     }
   }
 }

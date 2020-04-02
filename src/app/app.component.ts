@@ -22,9 +22,11 @@ constructor() {
         // TODO: create a Satellite object using new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
         // TODO: add the new Satellite object to sourceList using: this.sourceList.push(satellite);
         for (let prop of fetchedSatellites) {
-          this.sourceList.push(prop);
+          let newSatellite = new Satellite(prop.name, prop.type, prop.operational, prop.orbitType, prop.operational);
+          this.sourceList.push(newSatellite);
       }
      }.bind(this));
   }.bind(this));
+
 }
 }
