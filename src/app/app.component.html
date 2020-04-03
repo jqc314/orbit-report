@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-orbit-list [satellites]="displayList"></app-orbit-list>
 <div class="search-form">
-    <input #satEntry (keyup.enter)='search(satEntry.value)' type='text' placeholder="Enter Satellite Here"/>
+    <input #satEntry (keyup.enter)='search(satEntry.value)' type='text' placeholder="Enter Satellite Here" onfocus="this.placeholder = ''" />
     <button (click)='search(satEntry.value)'> Search</button>
 </div>
