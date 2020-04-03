@@ -21,6 +21,7 @@ constructor() {
 
         let fetchedSatellites = data.satellites;
         // TODO: loop over satellites
+        // tslint:disable-next-line: max-line-length
         // TODO: create a Satellite object using new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
         // TODO: add the new Satellite object to sourceList using: this.sourceList.push(satellite);
         for (let prop of fetchedSatellites) {
@@ -35,7 +36,8 @@ constructor() {
 search(searchTerm: string): void {
   let matchingSatellites: Satellite[] = [];
   searchTerm = searchTerm.toLowerCase();
-  for(let i=0; i < this.sourceList.length; i++) {
+  // tslint:disable-next-line: prefer-for-of
+  for (let i = 0; i < this.sourceList.length; i++) {
      let name = this.sourceList[i].name.toLowerCase();
      if (name.indexOf(searchTerm) >= 0) {
         matchingSatellites.push(this.sourceList[i]);
